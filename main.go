@@ -17,7 +17,6 @@ func main() {
 	http.HandleFunc("/", indexHandle)
 
 	err := http.ListenAndServe(":3000", nil)
-
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("server closed\n")
 	} else if err != nil {
